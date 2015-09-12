@@ -54,8 +54,8 @@ public class Briarcraft extends Plugin {
                 // Copy module configuration file
                 final String name = module.getConfigName();
                 if (name != null) {
-                    JarUtil.exportResource(this, name + ".cfg", new File("config/Briarcraft"),
-                            "Briarcraft." + name + ".cfg");
+                    JarUtil.exportResource(this, "Briarcraft." + name + ".cfg",
+                            new File("config/Briarcraft"));
                 }
 
                 // Initialize Module
