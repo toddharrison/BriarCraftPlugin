@@ -7,6 +7,8 @@ import net.canarymod.plugin.Plugin;
 import net.visualillusionsent.utils.PropertiesFile;
 
 public class BriarcraftConfig {
+    private static final String LOG_LEVEL = "log.level";
+
     private final PropertiesFile cfg;
 
     public BriarcraftConfig(final Plugin plugin) {
@@ -15,9 +17,8 @@ public class BriarcraftConfig {
 
     public String getLoggingLevel() {
         String level = null;
-        final String key = "log.level";
-        if (cfg.containsKey(key)) {
-            level = cfg.getString(key);
+        if (cfg.containsKey(LOG_LEVEL)) {
+            level = cfg.getString(LOG_LEVEL);
         }
         return level;
     }

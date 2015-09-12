@@ -1,8 +1,7 @@
 package com.goodformentertainment.bc;
 
-import java.util.Collection;
-
 import net.canarymod.commandsys.CommandListener;
+import net.canarymod.plugin.Plugin;
 import net.canarymod.plugin.PluginListener;
 
 public abstract class Module {
@@ -20,11 +19,18 @@ public abstract class Module {
     public void disable() {
     }
 
-    public Collection<PluginListener> getPluginListeners() {
+    public void createConfig(final Plugin plugin) {
+    }
+
+    public PluginListener[] getPluginListeners() {
         return null;
     }
 
-    public Collection<CommandListener> getCommandListeners() {
+    public CommandListener[] getCommandListeners() {
+        return null;
+    }
+
+    public String getNavigation() {
         return null;
     }
 }
